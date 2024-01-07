@@ -68,7 +68,7 @@ export const register = async (req: express.Request, res: express.Response) => {
         password: authentication(salt, password),
       },
     });
-    console.log("register func called");
+
     return res.status(200).json(user).end();
   } catch (error) {
     console.log(error);
